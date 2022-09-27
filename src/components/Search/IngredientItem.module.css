@@ -1,0 +1,10 @@
+.ingredient-item {
+  padding: 8px 10px;
+  background-color: #522d80;
+  border-radius: 10px;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

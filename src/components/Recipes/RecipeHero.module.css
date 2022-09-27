@@ -1,0 +1,42 @@
+.hero {
+  margin-top: 54px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #233179;
+  margin-top: 18px;
+}
+
+.hero img {
+  width: 400px;
+  height: 304px;
+}
+
+.cooking-time {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+}
+
+.serving-size {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.edit-servings {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

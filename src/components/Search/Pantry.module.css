@@ -1,0 +1,113 @@
+.left-col {
+  width: 650px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border-right: 1px solid black;
+}
+
+.pantry-header {
+  width: 170px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pantry-header h2 {
+  font-size: 24px;
+  padding-left: 8px;
+}
+
+.tooltip {
+  font-size: 12px;
+  width: 250px;
+  background-color: white;
+  padding: 8px;
+  border: 1px solid black;
+  position: absolute;
+
+  display: none;
+  left: 170px;
+  top: -50px;
+}
+
+.pantry-header:hover .tooltip {
+  display: block;
+}
+
+.ing-input-form {
+  margin-top: 16px;
+  padding-right: 18px;
+  display: flex;
+}
+
+.ing-input-form input {
+  height: 46px;
+  width: 600px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  font-size: 24px;
+  padding-left: 14px;
+}
+
+.ing-input-form button {
+  background-color: #522d80;
+  color: white;
+  width: 48px;
+  height: 46px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  font-size: 20px;
+}
+
+.ing-input-form button:hover {
+  font-size: 23px;
+}
+
+.no-ing-message {
+  background-color: #9e2b25;
+  border: 1px solid #9e2b25;
+  color: white;
+  width: 210px;
+  height: 72px;
+  font-size: 14px;
+  margin-top: 24px;
+  margin-left: 12px;
+  padding: 14px;
+
+  position: relative;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 18px solid #9e2b25;
+
+  position: absolute;
+  top: -18px;
+}
+
+.x-button {
+  background-color: black;
+  width: 26px;
+  height: 26px;
+  border-radius: 9999px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  left: 195px;
+  bottom: 54px;
+}
+
+.x-button:hover {
+  font-size: 18px;
+}

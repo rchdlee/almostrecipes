@@ -1,0 +1,59 @@
+.ingredients-container {
+  width: 240px;
+}
+
+.ingredients-section {
+  background-color: #bfd9ff;
+}
+
+.ingredients-section h4 {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 24px;
+  text-decoration: underline;
+}
+
+.ingredients-list {
+  width: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  padding-bottom: 24px;
+}
+
+.ingredient {
+  margin-top: 4px;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.ingredient input {
+  display: block;
+  padding-top: 6px;
+}
+
+.ingredient label {
+  padding-left: 8px;
+  transform: translateY(-5px);
+}
+
+.button {
+  margin-top: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button button {
+  width: 144px;
+  height: 54px;
+  border: 1px solid #233179;
+  color: #233179;
+}
+
+.button button:hover {
+  background-color: #522d80;
+  color: white;
+}

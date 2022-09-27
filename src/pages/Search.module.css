@@ -1,0 +1,44 @@
+.container {
+  width: 1000px;
+  height: 256px;
+  margin-top: 54px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #bfd9ff;
+  display: flex;
+}
+
+.right-col {
+  width: 350px;
+  padding: 24px;
+}
+
+.spinner {
+  margin-top: 32px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn-div {
+  margin-top: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn {
+  width: 180px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #522d80;
+  color: #eff4ff;
+  border: none;
+  border-radius: 12px;
+}
+
+.submit-btn:hover {
+  font-size: 14px;
+}

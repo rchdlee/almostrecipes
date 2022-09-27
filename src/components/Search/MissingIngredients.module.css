@@ -1,0 +1,44 @@
+.missing-ing-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+
+  position: relative;
+}
+
+.tooltip {
+  font-size: 12px;
+  width: 240px;
+  background-color: white;
+  padding: 8px;
+  border: 1px solid black;
+  position: absolute;
+
+  display: none;
+  left: 230px;
+  top: -25px;
+}
+
+.missing-ing-header:hover .tooltip {
+  display: block;
+}
+
+.missing-ing-inputs {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+}
+
+.missing-ing-inputs input[type="number"] {
+  width: 32px;
+  height: 28px;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+}

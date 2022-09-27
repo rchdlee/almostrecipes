@@ -1,0 +1,66 @@
+.title {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.bookmarks-container {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 18px;
+  column-gap: 36px;
+  justify-content: center;
+}
+
+.recipe {
+  width: 244px;
+  height: 330px;
+  box-shadow: 5px;
+}
+
+.recipe:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.recipe img {
+  width: 100%;
+}
+
+.recipe h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #233179;
+  text-align: center;
+  margin-top: 8px;
+  height: 64px;
+}
+
+.button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  padding: 12px;
+  color: #233179;
+  border: 1px solid #233179;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button:hover {
+  background-color: #233179;
+  color: white;
+}
+
+.no-bookmarks-message {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 20px;
+}

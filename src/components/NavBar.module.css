@@ -1,0 +1,42 @@
+nav {
+  height: 84px;
+  background-color: #bfd9ff;
+
+  display: flex;
+  justify-content: space-between;
+  /* position: fixed; */
+}
+
+.icon {
+  padding-left: 24px;
+  font-size: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header ul {
+  padding-right: 64px;
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.header a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+
+.header a:hover,
+.header a:active,
+.header a.active {
+  color: black;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid black;
+}

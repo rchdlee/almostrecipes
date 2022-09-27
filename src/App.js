@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
+
+import "./App.css";
+import NavBar from "./components/NavBar";
+import Search from "./pages/Search";
+import Recipe from "./components/Recipes/Recipe";
+import ShoppingList from "./pages/ShoppingList";
+import Bookmarks from "./pages/Bookmarks";
+import Footer from "./components/Footer";
+
+// https://coolors.co/bfd9ff-9e2b25-51355a-2a0c4e-2978a0
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <NavBar />
+      <Routes>
+        <Route path="/search" element={<Search />} />
+        <Route path="/search/:id" element={<Recipe />} />
+        <Route path="/shopping-list" element={<ShoppingList />} />
+        <Route path="/bookmarks" element={<Bookmarks />} />
+      </Routes>
+      <Footer />
+    </Fragment>
   );
 }
 

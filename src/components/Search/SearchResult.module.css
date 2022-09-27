@@ -1,0 +1,26 @@
+.search-result {
+  width: 245px;
+}
+
+.search-result-hover {
+  width: 245px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.recipe-img {
+  width: 245px;
+  height: 190px;
+}
+
+.recipe-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #233179;
+  padding-left: 12px;
+}
+
+.missing-ing-count {
+  margin-top: 12px;
+  padding-left: 12px;
+}
