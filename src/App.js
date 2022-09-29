@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Fragment>
+    <div>
       <NavBar />
       <Routes>
         <Route path="/search" element={<Search />} />
@@ -22,7 +22,7 @@ function App() {
         <Route path="/bookmarks" element={<Bookmarks />} />
       </Routes>
       <Footer />
-    </Fragment>
+    </div>
   );
 }
 

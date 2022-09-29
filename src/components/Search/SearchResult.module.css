@@ -1,11 +1,22 @@
 .search-result {
   width: 245px;
+  height: 350px;
+  /* border-radius: 12px; */
+  overflow: hidden;
+
+  background-color: #eff4ff;
+  text-decoration: none;
 }
 
-.search-result-hover {
+.search-result:hover {
   width: 245px;
 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3); */
+  box-shadow: 0 4px 8px 0 #2331794e;
+}
+
+.search-result a {
+  text-decoration: none;
 }
 
 .recipe-img {
@@ -18,6 +29,8 @@
   font-weight: 500;
   color: #233179;
   padding-left: 12px;
+
+  text-decoration: none;
 }
 
 .missing-ing-count {

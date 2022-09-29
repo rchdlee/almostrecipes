@@ -6,6 +6,8 @@
   margin-right: auto;
   background-color: #bfd9ff;
   display: flex;
+
+  border-radius: 8px;
 }
 
 .right-col {
@@ -41,4 +43,10 @@
 
 .submit-btn:hover {
   font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 800px;
+  }
 }

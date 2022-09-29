@@ -35,14 +35,8 @@ const SearchResult = (props) => {
 
     // props stuff for missed Ingredients when generating page
     // (or if props doesn't work maybe some super quick/hacky redux thing onclick?)
-    <Link to={id.toString()} onClick={clickHandler}>
-      <div
-        className={
-          isHovering ? classes["search-result-hover"] : classes["search-result"]
-        }
-        onMouseEnter={hoverHandler}
-        onMouseLeave={unhoverHandler}
-      >
+    <div className={classes["search-result"]}>
+      <Link to={id.toString()} onClick={clickHandler}>
         <img
           className={classes["recipe-img"]}
           src={image}
@@ -52,8 +46,8 @@ const SearchResult = (props) => {
         <p className={classes["missing-ing-count"]}>
           Missing Ingredients: {missedIngredientCount}
         </p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 

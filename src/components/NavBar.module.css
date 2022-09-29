@@ -1,4 +1,5 @@
 nav {
+  width: 100vw;
   height: 84px;
   background-color: #bfd9ff;
 
@@ -16,7 +17,7 @@ nav {
   justify-content: center;
 }
 
-.header ul {
+nav ul {
   padding-right: 64px;
   list-style: none;
 
@@ -26,16 +27,16 @@ nav {
   gap: 50px;
 }
 
-.header a {
+nav a {
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
   color: black;
 }
 
-.header a:hover,
-.header a:active,
-.header a.active {
+nav a:hover,
+nav a:active,
+nav a.active {
   color: black;
   padding-bottom: 0.25rem;
   border-bottom: 2px solid black;
