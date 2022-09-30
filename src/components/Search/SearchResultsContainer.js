@@ -57,7 +57,7 @@ const SearchResultsContainer = (props) => {
 
   const fetchErrorMessage = () => {
     return (
-      <div className={classes['fetch-error-message']}>
+      <div className={classes["fetch-error-message"]}>
         <FontAwesomeIcon icon={faTriangleExclamation} />
         <p>
           Something went wrong when searching for recipes. Please try again
@@ -69,7 +69,10 @@ const SearchResultsContainer = (props) => {
 
   return (
     <div className={classes.container}>
-      {searchResultCount === 0 && !props.fetchError && noRecipesMessage()}
+      {searchResultCount === 0 &&
+        !props.fetchError &&
+        !props.loading &&
+        noRecipesMessage()}
       {searchResultCount !== 0 && !props.fetchError && searchResultsMessage()}
       {props.fetchError && fetchErrorMessage()}
       <div className={classes["search-results"]}>

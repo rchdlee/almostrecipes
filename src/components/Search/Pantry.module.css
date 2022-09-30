@@ -54,7 +54,7 @@
 }
 
 .ing-input-form button {
-  background-color: #522d80;
+  background-color: #623797;
   color: white;
   width: 48px;
   height: 46px;
@@ -69,7 +69,6 @@
 
 .no-ing-message {
   background-color: #9e2b25;
-  border: 1px solid #9e2b25;
   color: white;
   width: 210px;
   height: 72px;
@@ -119,5 +118,118 @@
 
   .ing-input-form input {
     width: 420px;
+  }
+}
+
+@media (max-width: 900px) {
+  .left-col {
+    width: 100%;
+    height: 210px;
+    border-right: none;
+    /* border-bottom: 1px solid black; */
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .pantry-header {
+    padding-top: 24px;
+  }
+
+  .pantry-header h2 {
+    padding-left: 8px;
+  }
+
+  .ing-input-form input {
+    height: 38px;
+    width: 600px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    font-size: 20px;
+    padding-left: 14px;
+  }
+
+  .ing-input-form button {
+    background-color: #623797;
+    color: white;
+    width: 42px;
+    height: 38px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    font-size: 20px;
+  }
+
+  .ing-input-form button:hover {
+    font-size: 23px;
+  }
+
+  .no-ing-message {
+    background-color: #9e2b25;
+    color: white;
+    width: 180px;
+    height: 60px;
+    font-size: 12px;
+    margin-top: 18px;
+    margin-left: 12px;
+    padding: 14px;
+
+    position: relative;
+  }
+
+  .arrow-up {
+    top: -16px;
+  }
+
+  .x-button {
+    width: 20px;
+    height: 20px;
+
+    left: 169px;
+    bottom: 50px;
+  }
+
+  .x-button:hover {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .left-col {
+    height: 230px;
+  }
+
+  .ing-input-form input {
+    height: 38px;
+    width: 450px;
+  }
+
+  .pantry-header h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* .container {
+    width: 360px;
+  } */
+
+  .ing-input-form {
+    padding-right: 8px;
+  }
+
+  .ing-input-form input {
+    height: 32px;
+    width: 300px;
+    font-size: 16px;
+  }
+
+  .ing-input-form button {
+    width: 36px;
+    height: 32px;
+    font-size: 18px;
+  }
+
+  .tooltip {
+    left: 64px;
+    top: 60px;
   }
 }

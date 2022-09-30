@@ -47,18 +47,27 @@ const IngredientItem = (props) => {
     // console.log(search);
   };
 
+  //   return (
+  //     <li className={classes["ingredient-item"]}>
+  //       <p>{name}</p>
+  //       <div onMouseOver={mouseOverHandler} onMouseOut={mouseOutHandler}>
+  //         {!isHovering && <FontAwesomeIcon icon={faXmark} />}
+  //         {isHovering && (
+  //           <FontAwesomeIcon
+  //             icon={faXmark}
+  //             transform="grow-1.3"
+  //             onClick={ingredientDeleteHandler}
+  //           />
+  //         )}
+  //       </div>
+  //     </li>
+  //   );
+  // };
   return (
     <li className={classes["ingredient-item"]}>
       <p>{name}</p>
-      <div onMouseOver={mouseOverHandler} onMouseOut={mouseOutHandler}>
-        {!isHovering && <FontAwesomeIcon icon={faXmark} />}
-        {isHovering && (
-          <FontAwesomeIcon
-            icon={faXmark}
-            transform="grow-1.3"
-            onClick={ingredientDeleteHandler}
-          />
-        )}
+      <div className={classes.xmark} onClick={ingredientDeleteHandler}>
+        <FontAwesomeIcon icon={faXmark} />
       </div>
     </li>
   );

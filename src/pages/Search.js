@@ -105,7 +105,7 @@ const Search = () => {
           <div className={classes["submit-btn-div"]}>
             <button onClick={submitHandler} className={classes["submit-btn"]}>
               <h4>Search for Recipes!</h4>
-              <p>(ctrl + enter)</p>
+              {/* <p>(ctrl + enter)</p> */}
             </button>
           </div>
         </div>
@@ -124,7 +124,7 @@ const Search = () => {
           />
         </div>
       )}
-      <SearchResultsContainer fetchError={fetchError} />
+      <SearchResultsContainer fetchError={fetchError} loading={isLoading} />
     </Fragment>
   );
 };

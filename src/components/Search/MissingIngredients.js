@@ -34,7 +34,7 @@ const MissingIngredients = () => {
   };
 
   return (
-    <Fragment>
+    <div>
       <div className={classes["missing-ing-header"]}>
         <h4>Missing Ingredient Count</h4>
         <FontAwesomeIcon icon={faCircleQuestion} />
@@ -61,7 +61,7 @@ const MissingIngredients = () => {
           ref={missingIngInput}
         />
       </div>
-    </Fragment>
+    </div>
   );
 };
 

@@ -42,3 +42,38 @@
   text-align: center;
   font-size: 14px;
 }
+
+@media (max-width: 900px) {
+  .missing-ing-header {
+    padding-left: 12px;
+  }
+
+  .missing-ing-inputs {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .missing-ing-header {
+    padding-left: 6px;
+    margin-top: 6px;
+    width: 200px;
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .missing-ing-header h4 {
+    width: 140px;
+  }
+
+  .missing-ing-inputs {
+    gap: 18px;
+    justify-content: flex-start;
+    padding-left: 6px;
+  }
+
+  .tooltip {
+    left: 92px;
+    top: 36px;
+  }
+}

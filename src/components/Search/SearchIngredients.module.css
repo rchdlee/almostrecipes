@@ -9,6 +9,15 @@
   padding-bottom: 100px;
 }
 
-.ingredients p {
-  font-size: 14px;
+@media (max-width: 900px) {
+  .ingredients {
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 540px) {
+  .ingredients {
+    column-gap: 6px;
+    padding-bottom: 18px;
+  }
 }

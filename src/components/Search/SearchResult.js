@@ -35,19 +35,25 @@ const SearchResult = (props) => {
 
     // props stuff for missed Ingredients when generating page
     // (or if props doesn't work maybe some super quick/hacky redux thing onclick?)
-    <div className={classes["search-result"]}>
-      <Link to={id.toString()} onClick={clickHandler}>
+    <Link
+      to={id.toString()}
+      onClick={clickHandler}
+      style={{ textDecoration: "none" }}
+    >
+      <div className={classes["search-result"]}>
         <img
           className={classes["recipe-img"]}
           src={image}
           alt={`A picture of ${title}`}
         />
-        <h4 className={classes["recipe-title"]}>{title}</h4>
-        <p className={classes["missing-ing-count"]}>
-          Missing Ingredients: {missedIngredientCount}
-        </p>
-      </Link>
-    </div>
+        <div className={classes["recipe-info"]}>
+          <h4 className={classes["recipe-title"]}>{title}</h4>
+          <p className={classes["missing-ing-count"]}>
+            Missing Ingredients: {missedIngredientCount}
+          </p>
+        </div>
+      </div>
+    </Link>
   );
 };
 
