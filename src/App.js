@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -35,7 +35,7 @@ function App() {
         }
       >
         <Routes>
-          <Route path="/" element={<Search />} />
+          <Route path="/" element={<Navigate to="/search" />} />
           <Route path="/search" element={<Search />} />
           <Route path="/search/:id" element={<Recipe />} />
           <Route path="/shopping-list" element={<ShoppingList />} />

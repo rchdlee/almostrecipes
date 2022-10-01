@@ -103,12 +103,12 @@ const Recipe = (props) => {
 
   return (
     <div className={classes["recipe-container"]}>
-      <a href="http://localhost:3000/search" className={classes.link}>
-        <div className={classes["back-btn"]} onClick={backBtnClickHandler}>
-          <FontAwesomeIcon icon={faArrowLeft} />
-          <p>Back</p>
-        </div>
-      </a>
+      {/* <a href="http://localhost:3000/search" className={classes.link}> */}
+      <div className={classes["back-btn"]} onClick={backBtnClickHandler}>
+        <FontAwesomeIcon icon={faArrowLeft} />
+        <p>Back</p>
+      </div>
+      {/* </a> */}
       <RecipeHero />
       {/* <div className={classes.divider}>
         <FontAwesomeIcon icon={faMinus} />
