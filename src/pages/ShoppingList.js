@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { recipeActions } from "../store/recipe-slice";
 
@@ -66,9 +67,9 @@ const ShoppingList = () => {
         <p className={classes.ingredient}>{ing.name}</p>
         <p className={classes.amount}>{`${ing.amount} ${ing.unit}`}</p>
         <p className={classes.recipe}>
-          <a href={`http://localhost:3000/search/${ing.recipeID}`}>
+          <Link to={`/search/${ing.recipeID}`}>
             {ing.recipeName}
-          </a>
+          </Link>
         </p>
         <div
           id={ing.id}
@@ -90,7 +91,7 @@ const ShoppingList = () => {
         <div className={classes["chart-header"]}>
           <p className={classes.ingredient}>Ingredient</p>
           <p className={classes.amount}>Amount</p>
-          <p className={classes.recipe}>Recipe + Link</p>
+          <p className={classes.recipe}>Recipe Link</p>
         </div>
         {noIngredientsInList ? noIngredientsMessage : shoppingListItems}
       </div>

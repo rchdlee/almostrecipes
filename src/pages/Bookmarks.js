@@ -1,5 +1,6 @@
 import { Fragment, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { recipeActions } from "../store/recipe-slice";
 
@@ -49,10 +50,10 @@ const Bookmarks = () => {
   const bookmarksList = bookmarkedRecipes?.map((recipe) => {
     return (
       <div className={classes.recipe} key={recipe.id} id={recipe.id}>
-        <a href={`http://localhost:3000/search/${recipe.id}`}>
+        <Link to={`/search/${recipe.id}`}>
           <img src={recipe.imageURL} alt={recipe.recipeName} />
           <h3>{recipe.recipeName}</h3>
-        </a>
+        </Link>
         <button className={classes.button} onClick={bookmarkDeleteHandler}>
           <p>Remove Bookmark</p>
           <FontAwesomeIcon icon={faTrashCan} />

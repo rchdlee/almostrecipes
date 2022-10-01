@@ -23,15 +23,15 @@ const RecipeHero = () => {
         <div className={classes["cooking-time"]}>
           <FontAwesomeIcon icon={faClock} className={classes.icon} />
           <p>Cooking Time: </p>
-          <p>{cookingTime} min</p>
+          <p className={classes.bold}>{cookingTime} min</p>
         </div>
         <div className={classes["serving-size"]}>
           <FontAwesomeIcon icon={faUtensils} className={classes.icon} />
           <p>Serving Size: </p>
           <div className={classes["edit-servings"]}>
-            <FontAwesomeIcon icon={faCircleMinus} />
-            <p>{servingSize}</p>
-            <FontAwesomeIcon icon={faCirclePlus} />
+            {/* <FontAwesomeIcon icon={faCircleMinus} /> */}
+            <p className={classes.bold}>{servingSize}</p>
+            {/* <FontAwesomeIcon icon={faCirclePlus} /> */}
           </div>
         </div>
       </div>

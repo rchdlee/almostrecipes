@@ -3,7 +3,7 @@ import classes from "./NavBar.module.css";
 import { useState, Fragment, useEffect } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCarrot, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faCarrot, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
@@ -27,14 +27,24 @@ const NavBar = () => {
     return { innerWidth, innerHeight };
   }
 
+  const cssClasses = [
+    classes["side-navbar"],
+    menuIsOpen ? classes["open"] : classes["closed"],
+  ];
+
   const menuClickHandler = () => {
     console.log("clicked menu!");
-    setMenuIsOpen(true);
+    setMenuIsOpen((prevState) => !menuIsOpen);
+  };
+
+  const menuCloseHandler = () => {
+    console.log("closed menu!");
+    setMenuIsOpen(false);
   };
 
   if (windowSize.innerWidth >= 700) {
     return (
-      <nav>
+      <nav className={classes.navbar}>
         <div className={classes.icon}>
           <FontAwesomeIcon icon={faCarrot} />
         </div>
@@ -66,39 +76,58 @@ const NavBar = () => {
         </ul>
       </nav>
     );
+
+    // MINI SIDE NAVBAR
   } else {
     return (
-      <nav>
-        <div className={classes.icon}>
-          <FontAwesomeIcon icon={faCarrot} />
+      <div className={classes["navbar-small-container"]}>
+        <nav className={classes["navbar-small"]}>
+          <div className={classes.icon}>
+            <FontAwesomeIcon icon={faCarrot} />
+          </div>
+          <FontAwesomeIcon
+            icon={faBars}
+            onClick={menuClickHandler}
+            className={classes["menu-icon"]}
+          />
+        </nav>
+        <div className={cssClasses.join(" ")}>
+          <FontAwesomeIcon
+            icon={faXmark}
+            className={classes.xmark}
+            onClick={menuCloseHandler}
+          />
+          <ul>
+            <li>
+              <NavLink
+                to="search"
+                className={({ isActive }) => (isActive ? classes.active : "")}
+                onClick={menuCloseHandler}
+              >
+                RECIPE SEARCH
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="shopping-list"
+                className={({ isActive }) => (isActive ? classes.active : "")}
+                onClick={menuCloseHandler}
+              >
+                SHOPPING LIST
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="bookmarks"
+                className={({ isActive }) => (isActive ? classes.active : "")}
+                onClick={menuCloseHandler}
+              >
+                BOOKMARKS
+              </NavLink>
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li>
-            <NavLink
-              to="search"
-              className={({ isActive }) => (isActive ? classes.active : "")}
-            >
-              RECIPE SEARCH
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="shopping-list"
-              className={({ isActive }) => (isActive ? classes.active : "")}
-            >
-              SHOPPING LIST
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="bookmarks"
-              className={({ isActive }) => (isActive ? classes.active : "")}
-            >
-              BOOKMARKS
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
+      </div>
     );
   }
 };

@@ -35,3 +35,35 @@
   margin-top: 12px;
   padding-right: 24px;
 }
+
+@media (max-width: 1200px) {
+  .instructions {
+    width: 580px;
+  }
+}
+@media (max-width: 900px) {
+  .instructions {
+    width: 420px;
+  }
+}
+@media (max-width: 700px) {
+  .instructions {
+    margin-top: 32px;
+    width: 475px;
+  }
+}
+@media (max-width: 540px) {
+  .instructions {
+    margin-top: 24px;
+    width: 360px;
+    padding-left: 8px;
+  }
+
+  .instructions-header h3 {
+    font-size: 24px;
+  }
+
+  .bookmark-container {
+    margin-right: 12px;
+  }
+}

@@ -8,7 +8,7 @@
   width: 900px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 24px;
+  margin-top: 32px;
 
   display: flex;
   flex-wrap: wrap;
@@ -19,12 +19,17 @@
 
 .recipe {
   width: 244px;
-  height: 330px;
+  height: 320px;
   box-shadow: 5px;
+  background-color: #eff4ff;
 }
 
 .recipe:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.recipe a {
+  text-decoration: none;
 }
 
 .recipe img {
@@ -36,14 +41,15 @@
   font-weight: 500;
   color: #233179;
   text-align: center;
-  margin-top: 8px;
   height: 64px;
+  padding: 6px;
+  padding-top: 8px;
 }
 
 .button {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 16px;
+  margin-top: 24px;
   padding: 12px;
   color: #233179;
   border: 1px solid #233179;
@@ -63,4 +69,72 @@
   text-align: center;
   margin-top: 24px;
   font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+  .bookmarks-container {
+    width: 850px;
+  }
+}
+@media (max-width: 900px) {
+  .bookmarks-container {
+    width: 650px;
+    column-gap: 24px;
+  }
+
+  .recipe {
+    width: 200px;
+    height: 285px;
+  }
+
+  .recipe h3 {
+    font-size: 22px;
+  }
+
+  .button {
+    padding: 12px 8px;
+  }
+}
+@media (max-width: 700px) {
+  .bookmarks-container {
+    width: 475px;
+  }
+}
+@media (max-width: 540px) {
+  .bookmarks-container {
+    width: 360px;
+  }
+
+  .recipe {
+    width: 360px;
+    height: 108px;
+    display: flex;
+    /* position: absolute; */
+  }
+
+  .recipe a {
+    display: flex;
+  }
+
+  .recipe img {
+    width: 132px;
+    height: 108px;
+  }
+
+  .recipe h3 {
+    font-size: 16px;
+    padding: 12px;
+    text-align: left;
+  }
+
+  .button {
+    height: 32px;
+    /* display: none; */
+    margin-right: 12px;
+    margin-top: 64px;
+  }
+
+  .button p {
+    display: none;
+  }
 }

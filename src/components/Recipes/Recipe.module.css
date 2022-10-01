@@ -47,3 +47,29 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 1200px) {
+  .recipe-container {
+    width: 850px;
+  }
+}
+@media (max-width: 900px) {
+  .recipe-container {
+    width: 650px;
+  }
+}
+@media (max-width: 700px) {
+  .recipe-container {
+    width: 475px;
+    margin-top: 18px;
+  }
+}
+@media (max-width: 540px) {
+  .recipe-container {
+    width: 360px;
+  }
+
+  .back-btn {
+    margin-left: 4px;
+  }
+}

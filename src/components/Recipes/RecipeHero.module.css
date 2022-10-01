@@ -40,3 +40,54 @@
   align-items: center;
   gap: 12px;
 }
+
+.bold {
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 900px) {
+  .hero {
+    margin-top: 36px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero img {
+    width: 300px;
+    height: 228px;
+  }
+}
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column-reverse;
+    margin-top: 18px;
+  }
+
+  .hero img {
+    width: 475px;
+    height: 361px;
+  }
+}
+@media (max-width: 540px) {
+  .hero img {
+    width: 360px;
+    height: 274px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .icon {
+    height: 18px;
+    width: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

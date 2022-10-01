@@ -112,7 +112,9 @@ const Ingredients = (props) => {
           <h4>Ingredients</h4>
           <div className={classes["ingredients-list"]}>
             {/* {ingredientsStatus.length === 0 ? "" : ingredientsList} */}
-            {ingredientsList}
+            <div className={classes["ingredient-items-container"]}>
+              {ingredientsList}
+            </div>
             <hr
               style={{
                 width: 25,
@@ -124,7 +126,11 @@ const Ingredients = (props) => {
                 marginBottom: 12,
               }}
             />
-            {!submittedStatus ? buttonElement() : <p>test!</p>}
+            {!submittedStatus ? (
+              buttonElement()
+            ) : (
+              <p>added to shopping list!</p>
+            )}
             {/* <div className={classes.button}>
               <button>
                 Add Selected ({checkedIngredientCount}) <br /> to Shopping List
