@@ -1,7 +1,14 @@
+/* https://coolors.co/bfd9ff-9e2b25-51355a-2a0c4e-2978a0 */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
 }
 
 /* .display {

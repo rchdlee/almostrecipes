@@ -1,6 +1,7 @@
 import classes from "./NavBar.module.css";
 
-import { useState, Fragment, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCarrot, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -46,10 +47,12 @@ const NavBar = () => {
     return (
       <nav className={classes.navbar}>
         <div className={classes.icon}>
-          <FontAwesomeIcon icon={faCarrot} />
+          <Link to="/search">
+            <FontAwesomeIcon icon={faCarrot} />
+          </Link>
         </div>
         <ul>
-          <li>
+          <li className={classes.navlink}>
             <NavLink
               to="search"
               className={({ isActive }) => (isActive ? classes.active : "")}
@@ -57,7 +60,7 @@ const NavBar = () => {
               RECIPE SEARCH
             </NavLink>
           </li>
-          <li>
+          <li className={classes.navlink}>
             <NavLink
               to="shopping-list"
               className={({ isActive }) => (isActive ? classes.active : "")}
@@ -65,7 +68,7 @@ const NavBar = () => {
               SHOPPING LIST
             </NavLink>
           </li>
-          <li>
+          <li className={classes.navlink}>
             <NavLink
               to="bookmarks"
               className={({ isActive }) => (isActive ? classes.active : "")}
@@ -83,7 +86,9 @@ const NavBar = () => {
       <div className={classes["navbar-small-container"]}>
         <nav className={classes["navbar-small"]}>
           <div className={classes.icon}>
-            <FontAwesomeIcon icon={faCarrot} />
+            <Link to="/search">
+              <FontAwesomeIcon icon={faCarrot} />
+            </Link>
           </div>
           <FontAwesomeIcon
             icon={faBars}

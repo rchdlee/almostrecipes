@@ -7,7 +7,7 @@ import { searchActions } from "../store/search-slice";
 import Pantry from "../components/Search/Pantry";
 import MissingIngredients from "../components/Search/MissingIngredients";
 import SearchResultsContainer from "../components/Search/SearchResultsContainer";
-import { Link, Route, Routes, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 import { API_KEY } from "../components/Helpers/constants";
 

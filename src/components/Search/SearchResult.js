@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link, useLinkClickHandler } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { recipeActions } from "../../store/recipe-slice";
 
 import classes from "./SearchResult.module.css";
@@ -8,21 +7,11 @@ import classes from "./SearchResult.module.css";
 const SearchResult = (props) => {
   const dispatch = useDispatch();
 
-  const [isHovering, setIsHovering] = useState(false);
-
   const { id, title, image, missedIngredientCount, missedIngredients } =
     props.recipe;
 
   // console.log(id, title, image, missedIngredientCount, missedIngredients);
   // console.log(missedIngredients);
-
-  const hoverHandler = () => {
-    setIsHovering(true);
-  };
-
-  const unhoverHandler = () => {
-    setIsHovering(false);
-  };
 
   const clickHandler = () => {
     console.log("clicked on a recipe!! 😀");
@@ -41,11 +30,7 @@ const SearchResult = (props) => {
       style={{ textDecoration: "none" }}
     >
       <div className={classes["search-result"]}>
-        <img
-          className={classes["recipe-img"]}
-          src={image}
-          alt={`A picture of ${title}`}
-        />
+        <img className={classes["recipe-img"]} src={image} alt={`${title}`} />
         <div className={classes["recipe-info"]}>
           <h4 className={classes["recipe-title"]}>{title}</h4>
           <p className={classes["missing-ing-count"]}>
